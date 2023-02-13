@@ -7,27 +7,32 @@ module.exports.mostrar = (req, res)=>{
                 message: 'Error mostrando los prestatarios'+error
             })
         }
-        //console.log(usuarios.length)
-        return res.render('0-2-AdminPrestatario', 
-        
-        {total: prestatarios.length+1,
-             prestatarios: prestatarios,
-              lastid: 1+prestatarios[prestatarios.length-1].idPrestatario})
+        if(!prestatarios) {
+            return res.status(404).json({
+                message: 'No hay prestatarios'
+            })
+        }
+        res.status(200).json({
+            prestatarios
+        })
     })
 }
 //Mostrar por ID
-module.exports.mostrarId = (req, res)=>{
-    Prestatario.find({idPrestatario: req.params.id}, (error, prestatarios)=>{
+module.exports.mostrarPorId = (req, res)=>{
+    let id = req.params.id;
+    Prestatario.findById(id, (error, prestatario)=>{
         if(error) {
             return res.status(500).json({
-                message: 'Error mostrando los prestatarios'+error
+                message: 'Error mostrando el prestatario'+error
             })
         }
-        //console.log(usuarios.length)
-        return res.render('0-2-AdminPrestatario', 
-        
-        {total: prestatarios.length+1,
-             prestatarios: prestatarios,
-              lastid: 1+prestatarios[prestatarios.length-1].idPrestatario})
+        if(!prestatario) {
+            return res.status(404).json({
+                message: 'No hay prestatario'
+            })
+        }
+        res.status(200).json({
+            prestatario
+        })
     })
 }

@@ -1,10 +1,5 @@
 const express=require('express');
-const engine= require('ejs-mate');
 const path=require('path');
-const morgan = require('morgan');
-const passport = require('passport');
-const session = require('express-session');
-const flash = require('connect-flash');
 //inicializaciones
 const app=express();
 const port = process.env.PORT || 3000;

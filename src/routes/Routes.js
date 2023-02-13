@@ -1,13 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
+//Importar controladores
+const prestatarioController = require('../controllers/2-prestatarioController');
 //Mostrar todos los prestatarios (GET)
 router.get('/adminPrestatario/', prestatarioController.mostrar)
-//Crear usuarios (POST)
-router.post('/adminPrestatario/crear', prestatarioController.crear)
-//Editar usuarios (POST)
-router.post('/adminPrestatario/editar', prestatarioController.editar)
-//Borrar usuarios (GET)
-router.get('/adminPrestatario/borrar/:id', prestatarioController.borrar)
-
+//Mostrar un prestatario por ID (GET)
+router.get('/adminPrestatario/:id', prestatarioController.mostrarPorId)
 module.exports = router;
