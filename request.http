@@ -1,3 +1,4 @@
+//LOCAL
 ###
 GET http://localhost:3000/adminPrestatario/ HTTP/1.1
 Content-Type: application/json
@@ -16,7 +17,12 @@ Content-Type: application/json
 GET http://localhost:3000/adminPrestatario/idPrestatario/2 HTTP/1.1
 Content-Type: application/json
 
-//Peticion obtener prestatario por ID
+
+
+
+
+
+
 //Railway
 ###
 GET https://softni-syncprestatario-production.up.railway.app/adminPrestatario/ HTTP/1.1
