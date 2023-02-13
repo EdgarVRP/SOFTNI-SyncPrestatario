@@ -1,40 +1,7 @@
 ###
-POST http://localhost:3000/admin/crear HTTP/1.1
+GET http://localhost:3000/adminPrestatario/ HTTP/1.1
 Content-Type: application/json
 
-{
-  "idUsuario": 6,
-    "userName" : "test1@ejemplo.com",
-    "password" : "test1@ejemplo.com",
-    "dateTimeLogin" : "String",
-    "rolUser" : "Administrador TI",
-    "fechaCreacion" : "String",
-    "email" : "test1@ejemplo.com",
-    "telefono" : 1
-  }
-
-
+//Peticion obtener prestatario por ID
 ###
-POST http://localhost:3000/adminPrestatario/crear HTTP/1.1
-Content-Type: application/json
-
-{
-
-  "idUsuario": 2,
-  "idPrestatario": 2,
-  "prestatarioName" : "Prestatario 2",
-  "rfc" : "JUPR",
-  "codigoPostal" : "12345",
-  "ciudad" : "CDMX",
-  "direccion" : "Calle 1",
-  "cruzamientos" : "Calle 2",
-  "telefono" : 1234567890,
-  "email" : "ejemplo@ejemplo.com",
-  "numContrato": 2,
-  "fechaContratoPrestatario": "1",
-  "rutaContratoPrestatario": "1",
-  "rutaIdentificacion": "1",
-  "rutaComprobanteDomicilio": "1",
-  "lineaCredito": 1,
-  "calificacionCredito": "1"
-  }
+GET http://localhost:3000/adminPrestatario/63d41ecec22069c376bed6af HTTP/1.1
