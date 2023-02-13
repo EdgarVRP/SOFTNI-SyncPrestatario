@@ -5,3 +5,13 @@ Content-Type: application/json
 //Peticion obtener prestatario por ID
 ###
 GET http://localhost:3000/adminPrestatario/63d41ecec22069c376bed6af HTTP/1.1
+Content-Type: application/json
+
+//Peticion obtener prestatatario por idPrestatario
+###
+GET http://localhost:3000/adminPrestatario/idPrestatario/1 HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:3000/adminPrestatario/idPrestatario/2 HTTP/1.1
+Content-Type: application/json

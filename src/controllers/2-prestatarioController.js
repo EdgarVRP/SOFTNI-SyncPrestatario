@@ -36,3 +36,22 @@ module.exports.mostrarPorId = (req, res)=>{
         })
     })
 }
+//Mostrar por idPrestatario
+module.exports.mostrarPorIdPrestatario = (req, res)=>{
+    let idPrestatario = req.params.idPrestatario;
+    Prestatario.find({idPrestatario}, (error, prestatario)=>{
+        if(error) {
+            return res.status(500).json({
+                message: 'Error mostrando el prestatario'+error
+            })
+        }
+        if(!prestatario) {
+            return res.status(404).json({
+                message: 'No hay prestatario'
+            })
+        }
+        res.status(200).json({
+            prestatario
+        })
+    })
+}

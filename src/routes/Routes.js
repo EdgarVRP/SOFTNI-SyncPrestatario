@@ -6,4 +6,6 @@ const prestatarioController = require('../controllers/2-prestatarioController');
 router.get('/adminPrestatario/', prestatarioController.mostrar)
 //Mostrar un prestatario por ID (GET)
 router.get('/adminPrestatario/:id', prestatarioController.mostrarPorId)
+//Mostrar un prestatario por idPrestatario (GET)
+router.get('/adminPrestatario/idPrestatario/:idPrestatario', prestatarioController.mostrarPorIdPrestatario)
 module.exports = router;
