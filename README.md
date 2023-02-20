@@ -98,3 +98,15 @@ Se añade la excepcion de carpeta modules y archivo .env en gitignore
 /node_modules
 .env
 ```
+
+Para correr pruebas
+
+npm run test
+
+npm install mongodb-memory-server --save-dev
+
+npm i mongodb-memory-server
+
+```
+npm install supertest --save-dev
+```

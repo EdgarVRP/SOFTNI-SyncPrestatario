@@ -3,19 +3,21 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "mongodb-memory-server": "^8.11.4",
     "mongoose": "^6.9.1"
   },
   "devDependencies": {
     "jest": "^29.4.2",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
   },
   "name": "softni-syncprestatario",
   "description": "Servicio web que permite visualizar informacion de prestatarios del proyecto SOFOM",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon src/app.js",
+    "test": "jest",
+    "dev": "nodemon src/app.js",
     "start": "node src/app.js"
   },
   "repository": {
