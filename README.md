@@ -43,7 +43,7 @@ touch .gitignore
 touch request.http
 touch .env
 mkdir src
-touch src/app.js
+
 mkdir src/db
 touch src/db/URI.js
 mkdir src/controllers
@@ -103,10 +103,17 @@ Para correr pruebas
 
 npm run test
 
-npm install mongodb-memory-server --save-dev
-
-npm i mongodb-memory-server
+Se añade vista de tutorial del servicio
 
 ```
-npm install supertest --save-dev
+mkdir src/views
+touch src/views/index.html
+mkdir src/public
+mkdir src/public/css/
+touch src/public/css/style.css
+mkdir src/public/img
 ```
+
+Se añade EJS para las vistas
+
+`npm i ejs`
