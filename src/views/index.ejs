@@ -31,10 +31,137 @@
       </div>
     </header>
     <main>
-      <div class="container"></div>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="./img/SOFOM.png"
+              class="d-block w-100 h-100"
+              alt="Procesos de Negocio SOFOM"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./img/SOFOM2.png"
+              class="d-block w-100 h-100"
+              alt="Procesos de Negocio SOFOM 2"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./img/SOFOM3.png"
+              class="d-block w-100 h-100"
+              alt="Diagrama Casos de Uso"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./img/SOFOM5.png"
+              class="d-block w-100 h-100"
+              alt="Diagrama Clases"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./img/SOFOM6.png"
+              class="d-block w-100 h-100"
+              alt="Diagrama Despliegue"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Introducción</h2>
+            <p>
+              Este tutorial tiene como objetivo mostrar el uso del servicio de
+              sincronización de prestatario, el cual es parte del proyecto de
+              SOFOM.
+            </p>
+            <p>
+              El servicio de sincronización de prestatario se encarga de
+              sincronizar los datos de los prestatarios que se encuentran en la
+              base de datos de un proceso de negocio de la SOFOM.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h2>Requisitos</h2>
+            <p>
+              Para poder realizar este tutorial se requiere tener instalado:
+            </p>
+            <ul>
+              <li>Postman o cualquier software que permita probar API's</li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <h2>Procedimiento:</h2>
+            <p>
+              Se pueden acceder de 3 maneras a los datos de prestatarios :
+            </p>
+            <ul>
+              <li>Obteniendo todos los prestatarios:
+                <ul>
+                  <li>URL: https://softni-syncprestatario-production.up.railway.app/adminPrestatario/</li>
+                  <li>Método: GET</li>
+                  <li>Parámetros: Ninguno</li>
+                  <li>Respuesta: Arreglo de prestatarios</li>
+                  <img src="./img/POSTMAN/test1.png" alt="Respuesta todos los prestatarios" />
+                </ul>
+              </li>
+              <li>Obteniendo un prestatario por su id (En base de datos):
+                <ul>
+                  <li>URL: https://softni-syncprestatario-production.up.railway.app/adminPrestatario/#</li>
+                  <li>Método: GET</li>
+                  <li>Parámetros: Se sustituye '#' por el numero de id en base de datos</li>
+                  <li>Respuesta: Arreglo de prestatarios</li>
+                  <li>Ejemplo: https://softni-syncprestatario-production.up.railway.app/adminPrestatario/63d41ecec22069c376bed6af</li>
+                  <img src="./img/POSTMAN/test2.png" alt="Respuesta todos prestatario por id en base de datos" />
+                </ul>
+              </li>
+              <li>Obteniendo un prestatario por su id de prestatario:
+                <ul>
+                  <li>URL: https://softni-syncprestatario-production.up.railway.app/adminPrestatario/idPrestatario/#</li>
+                  <li>Método: GET</li>
+                  <li>Parámetros: Se sustituye '#' por el numero de id de prestatario</li>
+                  <li>Respuesta: Arreglo de 1 prestatari</li>
+                  <li>Ejemplo: https://softni-syncprestatario-production.up.railway.app/adminPrestatario/idPrestatario/1</li>
+                  <img src="./img/POSTMAN/test3.png" alt="Respuesta todos prestatario por id de prestatario" />
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <div class="container"></div>
+      <a href="https://github.com/EdgarVRP">
+        <p class="Copyright">SOFTNI&copy By EdgarVRP</p>
+      </a>
     </footer>
     <!-- Bootstrap JS -->
     <script
