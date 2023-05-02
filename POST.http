@@ -1,0 +1,76 @@
+//LOCAL
+###
+POST  http://localhost:3001/adminPrestatario/crear HTTP/1.1
+Content-Type: application/json
+    
+    {
+    "prestatarioName": "Nombre 2",
+  "rfc": "RFC 2",
+  "codigoPostal": 22222,
+  "ciudad": "CD 2",
+  "direccion": "Direccion 2",
+  "cruzamientos": "Cruzamientos 2",
+  "telefono": 2,
+  "email": "ejemplo2@ejemplo.com"
+    }
+
+###
+POST  http://localhost:3001/adminPrestatario/crear HTTP/1.1
+Content-Type: application/json
+    
+    {
+  "prestatarioName": "Nombre 3",
+  "rfc": "RFC 3",
+  "codigoPostal": 33333,
+  "ciudad": "CD 3",
+  "direccion": "Direccion 3",
+  "cruzamientos": "Cruzamientos 3",
+  "telefono": 3,
+  "email": "ejemplo3@ejemplo.com"
+    }
+
+###
+POST  http://localhost:3001/adminPrestatario/crear HTTP/1.1
+Content-Type: application/json
+    
+    {
+  "prestatarioName": "Nombre 4",
+  "rfc": "RFC 4",
+  "codigoPostal": 44444,
+  "ciudad": "CD 4",
+  "direccion": "Direccion 4",
+  "cruzamientos": "Cruzamientos 4",
+  "telefono": 4,
+  "email": "ejemplo4@ejemplo.com"
+}
+
+###
+POST  http://localhost:3001/adminPrestatario/crear HTTP/1.1
+Content-Type: application/json
+    
+    {
+  "prestatarioName": "Nombre 5",
+  "rfc": "RFC 5",
+  "codigoPostal": 55555,
+  "ciudad": "CD 5",
+  "direccion": "Direccion 5",
+  "cruzamientos": "Cruzamientos 5",
+  "telefono": 5,
+  "email": "ejemplo5@ejemplo.com"
+}
+
+###
+POST  http://localhost:3001/adminPrestatario/crear HTTP/1.1
+Content-Type: application/json
+    
+{
+  "prestatarioName": "Nombre 6",
+  "rfc": "RFC 6",
+  "codigoPostal": 66666,
+  "ciudad": "CD 6",
+  "direccion": "Direccion 6",
+  "cruzamientos": "Cruzamientos 6",
+  "telefono": 6,
+  "email": "ejemplo6@ejemplo.com"
+}
+

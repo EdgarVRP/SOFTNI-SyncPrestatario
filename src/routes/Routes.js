@@ -9,6 +9,12 @@ router.get('/adminPrestatario/', prestatarioController.mostrar)
 router.get('/adminPrestatario/:id', prestatarioController.mostrarPorId)
 //Mostrar un prestatario por idPrestatario (GET)
 router.get('/adminPrestatario/idPrestatario/:idPrestatario', prestatarioController.mostrarPorIdPrestatario)
+//post
+router.post('/adminPrestatario/crear', prestatarioController.crear)
+//put
+router.put('/adminPrestatario/:idPrestatario', prestatarioController.editar)
+//delete
+router.delete('/adminPrestatario/:idPrestatario', prestatarioController.borrar)
 //home
 router.get('/', (req, res) => {
     res.render('index');

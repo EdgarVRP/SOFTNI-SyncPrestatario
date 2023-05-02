@@ -1,10 +1,18 @@
 const express=require('express');
 const path=require('path');
+const bodyParser = require('body-parser')
+//Se importa cors
+const cors = require('cors');
 //inicializaciones
 const app=express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 //Se invoca conexion a la base de datos
 const ejs = require('ejs');
+//middlewares
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+//middlewar cors
+app.use(cors());
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

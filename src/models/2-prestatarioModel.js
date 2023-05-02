@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const prestatarioSchema = new Schema(
   {
-    idUsuario: {type: Number, required: true},
-    idPrestatario: {type: Number, required: true},
+    idPrestatario: {type: Number, default: 1},
     prestatarioName : {type: String, required: true},
     rfc : {type: String, required: true},
     codigoPostal : {type: Number, required: true},
@@ -19,6 +18,11 @@ const prestatarioSchema = new Schema(
     rutaComprobanteDomicilio: {type: String},
     lineaCredito: {type: Number},
     calificacionCredito: {type: String},
+    procesoAnalisis: {type: Boolean, default: false},
+    procesoAlta: {type: Boolean, default: false},    
+    creditoAceptado: {type: Boolean, default: false},
+    score : {type: Number, default: 0},
+    ingresoMensual : {type: Number, default: 0}
   },
   { versionKey: false }
 );

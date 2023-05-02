@@ -117,3 +117,6 @@ mkdir src/public/img
 Se añade EJS para las vistas
 
 `npm i ejs`
+
+
+Se instala cors
