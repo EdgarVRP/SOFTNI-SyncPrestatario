@@ -100,7 +100,8 @@ module.exports.crear = (req, res) => {
             procesoAlta: req.body.procesoAlta,
             creditoAceptado: req.body.creditoAceptado,
             score: req.body.score,
-            ingresoMensual: req.body.ingresoMensual
+            ingresoMensual: req.body.ingresoMensual,
+            rutaEstadoFinanciero: req.body.rutaEstadoFinanciero
           });
           prestatario.save(function (error, prestatario) {
             if (error) {
@@ -146,7 +147,8 @@ module.exports.editar = (req, res) => {
     procesoAlta: req.body.procesoAlta,
     creditoAceptado: req.body.creditoAceptado,
     score: req.body.score,
-    ingresoMensual: req.body.ingresoMensual
+    ingresoMensual: req.body.ingresoMensual,
+    rutaEstadoFinanciero: req.body.rutaEstadoFinanciero,
   };
   Prestatario.find({ idPrestatario }, (error, prestatario) => {
     if (error) {

@@ -15,6 +15,7 @@ const prestatarioSchema = new Schema(
     fechaContratoPrestatario: {type: String},
     rutaContratoPrestatario: {type: String},
     rutaIdentificacion: {type: String},
+    rutaEstadoFinanciero: {type: String},
     rutaComprobanteDomicilio: {type: String},
     lineaCredito: {type: Number},
     calificacionCredito: {type: String},
