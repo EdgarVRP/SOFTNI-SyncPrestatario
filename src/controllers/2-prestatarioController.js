@@ -188,7 +188,7 @@ module.exports.borrar = (req, res) => {
       });
     } else {
       res.status(200).json({
-        message: "Prestatario editado correctamente",
+        message: "Prestatario borrado correctamente",
       });
     }
   });
