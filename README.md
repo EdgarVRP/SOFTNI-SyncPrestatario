@@ -12,8 +12,8 @@ npm init
 ####Para los servicios CRUD (repo que sirvio de base https://github.com/infodp/crud_mongodb)
 
 ```
-npm i dotenv
 npm i ejs
+npm i dotenv
 npm i express
 npm i mongoose
 ```
@@ -118,5 +118,6 @@ Se añade EJS para las vistas
 
 `npm i ejs`
 
-
 Se instala cors
+
+npm i cors
