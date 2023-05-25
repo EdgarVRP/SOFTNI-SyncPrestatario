@@ -17,6 +17,6 @@ router.put('/adminPrestatario/:idPrestatario', prestatarioController.editar)
 router.delete('/adminPrestatario/:idPrestatario', prestatarioController.borrar)
 //home
 router.get('/', (req, res) => {
-    res.render('index');
+    res.sendFile('index.html', { root: './src/views' });
 });
 module.exports = router;

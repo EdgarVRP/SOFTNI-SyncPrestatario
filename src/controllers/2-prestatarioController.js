@@ -1,5 +1,4 @@
 const Prestatario = require("../models/2-prestatarioModel");
-
 //Mostrar
 module.exports.mostrar = (req, res) => {
   Prestatario.find({}, (error, prestatarios) => {
@@ -18,7 +17,6 @@ module.exports.mostrar = (req, res) => {
     });
   });
 };
-
 //Mostrar por ID
 module.exports.mostrarPorId = (req, res) => {
   let id = req.params.id;
@@ -120,7 +118,6 @@ module.exports.crear = (req, res) => {
     }
   });
 };
-
 //Editar
 module.exports.editar = (req, res) => {
   const idPrestatario = req.params.idPrestatario;
@@ -177,7 +174,6 @@ module.exports.editar = (req, res) => {
     });
   });
 };
-
 //Borrar
 module.exports.borrar = (req, res) => {
   const idPrestatario = req.params.idPrestatario;
