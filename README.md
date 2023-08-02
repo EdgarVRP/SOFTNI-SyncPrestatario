@@ -121,3 +121,8 @@ Se añade EJS para las vistas
 Se instala cors
 
 npm i cors
+
+
+Se añade servicio para enviar por correo la data ingresada en un form
+
+npm install express nodemailer

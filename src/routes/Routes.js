@@ -19,4 +19,7 @@ router.delete('/adminPrestatario/:idPrestatario', prestatarioController.borrar)
 router.get('/', (req, res) => {
     res.sendFile('index.html', { root: './src/views' });
 });
+//Ruta para email
+//router.get('/email', prestatarioController.email) 
+router.post('/email', prestatarioController.enviarCorreo)
 module.exports = router;

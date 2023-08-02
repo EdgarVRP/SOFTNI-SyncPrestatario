@@ -107,11 +107,54 @@ module.exports.crear = (req, res) => {
                 message: "Error al crear el Prestatario: " + error,
               });
             }
+            //Se realiza envio de correo electronico al prestatario con la libreria nodemailer y la informacion ingresada en el formulario
+            const nodemailer = require('nodemailer');
+            const gmail=process.env.mail;
+            const pass=process.env.password;
+            const contentHTML = `
+            <h1>Correo de solicitud de prestamo</h1>
+            <ul>
+              <li>Nombre: ${req.body.prestatarioName}</li>
+              <li>RFC: ${req.body.rfc}</li>
+              <li>Codigo Postal: ${req.body.codigoPostal}</li>
+              <li>Ciudad: ${req.body.ciudad}</li>
+              <li>Telefono: ${req.body.telefono}</li>
+              <li>Email: ${req.body.email}</li>
+              <li>Numero de solicitud: ${prestatario.idPrestatario}</li>
+            </ul>
+            <p>Para ver la solicitud de prestamo completa, ingrese al sistema SOFOM</p>
+          `;
+            const transporter = nodemailer.createTransport({
+              service: "Gmail",
+              auth: {
+                user: gmail,
+                pass: pass,
+              },
+            });
+            const info = {
+              from: "Proyecto SOFOM",
+              to: req.body.email,
+              subject: "Solicitud de prestamo",
+              html: contentHTML,
+            };
+            transporter.sendMail(info, function (error, info) {
+              if (error) {
+                console.log(error);
+                res.status(500).send(error.message);
+              } else {
+                console.log("Email enviado");
+                res.status(200).json({
+                  message: "Correo enviado correctamente",
+                });
+              }
+            });
+
             res.status(201).json({
               message:
                 "Solicitud guardada con el numero: " +
-                prestatario.idPrestatario,
+                prestatario.idPrestatario
             });
+            
           });
         }
       );
@@ -188,4 +231,47 @@ module.exports.borrar = (req, res) => {
       });
     }
   });
+};
+//Servicio para enviar correos electrónicos con la librería nodemailer
+module.exports.enviarCorreo = (req, res) => {
+  
+const nodemailer = require('nodemailer');
+  const body = req.body;    
+const gmail=process.env.mail;
+const pass=process.env.password;
+  const contentHTML = `
+    <h1>Correo de solicitud de prestamo</h1>
+    <ul>
+      <li>Nombre: ${body.prestatarioName}</li>
+      <li>RFC: ${body.rfc}</li>
+      <li>Codigo Postal: ${body.codigoPostal}</li>
+      <li>Ciudad: ${body.ciudad}</li>
+    </ul>
+    <p>Para ver la solicitud de prestamo completa, ingrese al sistema SOFOM</p>
+  `;
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: gmail,
+      pass: pass,
+    },
+  });
+  const info = {
+    from: "Proyecto SOFOM",
+    to: body.email,
+    subject: "Solicitud de prestamo",
+    html: contentHTML,
+  };
+  transporter.sendMail(info, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.status(500).send(error.message);
+    } else {
+      console.log("Email enviado");
+      res.status(200).json({
+        message: "Correo enviado correctamente",
+      });
+    }
+  }
+  );
 };
